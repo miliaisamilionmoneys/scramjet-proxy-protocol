@@ -48,6 +48,7 @@ form.addEventListener("submit", async (event) => {
 	const url = search(address.value, searchEngine.value);
 
 	let wispUrl =
+		_CONFIG.wispurl ||
 		(location.protocol === "https:" ? "wss" : "ws") +
 		"://" +
 		location.host +
