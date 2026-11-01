@@ -1,0 +1,9 @@
+[build]
+  command = "pnpm install && node scripts/build-static.mjs"
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
